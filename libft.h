@@ -91,6 +91,4 @@ int					ft_count_digits(int nb);
 int					ft_count_digit_u(unsigned int n);
 int					ft_count_hex_digits(unsigned long nb);
 
-char				*get_next_line(int fd);
-
 #endif

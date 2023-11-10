@@ -39,8 +39,7 @@ SRC      := ft_isalpha.c \
 			 ft_printf_num.c \
 			 ft_printf_hex.c \
 			 ft_printf_text.c \
-			 ft_count_utils.c \
-			 get_next_line.c
+			 ft_count_utils.c
 
 BONUS	:= ft_lstnew.c \
 			ft_lstadd_front.c \
