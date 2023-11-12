@@ -41,7 +41,16 @@ SRC      := ft_isalpha.c \
 			 ft_printf_text.c \
 			 ft_count_utils.c \
 			 get_next_line.c \
-			 get_next_line_utils.c
+			 get_next_line_utils.c \
+			 ft_lstnew.c \
+			 ft_lstadd_front.c \
+			 ft_lstadd_back.c \
+			 ft_lstsize.c \
+			 ft_lstlast.c \
+			 ft_lstdelone.c \
+			 ft_lstclear.c \
+			 ft_lstiter.c \
+			 ft_lstmap.c
 
 BONUS	:= ft_lstnew.c \
 			ft_lstadd_front.c \
