@@ -6,7 +6,7 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:41:44 by aallou-v          #+#    #+#             */
-/*   Updated: 2023/11/10 03:47:42 by aallou-v         ###   ########.fr       */
+/*   Updated: 2023/11/12 22:31:40 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,7 @@ char				*ft_read_and_save(int fd, char *save);
 size_t				ft_strlen_GNL(const char *s);
 char				*ft_strchr_GNL(char *s, int c);
 char				*ft_strjoin_GNL(char *s1, char *s2);
+
+int					ft_isonly(char *s, char *charset);
 
 #endif
