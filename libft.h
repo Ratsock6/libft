@@ -95,9 +95,9 @@ char				*get_next_line(int fd);
 char				*ft_get_line(char *save);
 char				*ft_save(char *save);
 char				*ft_read_and_save(int fd, char *save);
-size_t				ft_strlen_GNL(const char *s);
-char				*ft_strchr_GNL(char *s, int c);
-char				*ft_strjoin_GNL(char *s1, char *s2);
+size_t				ft_strlen_gnl(const char *s);
+char				*ft_strchr_gnl(char *s, int c);
+char				*ft_strjoin_gnl(char *s1, char *s2);
 
 int					ft_isonly(char *s, char *charset);
 

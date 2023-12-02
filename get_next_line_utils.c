@@ -6,13 +6,13 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:36:37 by marvin            #+#    #+#             */
-/*   Updated: 2023/11/10 03:47:24 by aallou-v         ###   ########.fr       */
+/*   Updated: 2023/12/02 17:00:41 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen_GNL(const char *s)
+size_t	ft_strlen_gnl(const char *s)
 {
 	size_t	i;
 
@@ -22,7 +22,7 @@ size_t	ft_strlen_GNL(const char *s)
 	return (i);
 }
 
-char	*ft_strchr_GNL(char *s, int c)
+char	*ft_strchr_gnl(char *s, int c)
 {
 	int	i;
 
@@ -40,7 +40,7 @@ char	*ft_strchr_GNL(char *s, int c)
 	return (0);
 }
 
-char	*ft_strjoin_GNL(char *s1, char *s2)
+char	*ft_strjoin_gnl(char *s1, char *s2)
 {
 	size_t	i;
 	size_t	c;

@@ -6,7 +6,7 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 22:24:12 by aallou-v          #+#    #+#             */
-/*   Updated: 2023/11/12 22:31:41 by aallou-v         ###   ########.fr       */
+/*   Updated: 2023/12/02 17:00:05 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ static int	ft_is_charset(char c, char *charset)
 
 int	ft_isonly(char *s, char *charset)
 {
-	int i;
+	int	i;
 
 	i = -1;
-	while(s[++i])
+	while (s[++i])
 	{
 		if (!ft_is_charset(s[i], charset))
 			return (0);
