@@ -6,7 +6,7 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:41:44 by aallou-v          #+#    #+#             */
-/*   Updated: 2024/05/13 16:18:27 by aallou-v         ###   ########.fr       */
+/*   Updated: 2024/05/13 18:57:33 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,6 @@ char				*ft_strchr_gnl(char *s, int c);
 char				*ft_strjoin_gnl(char *s1, char *s2);
 
 int					ft_isonly(char *s, char *charset);
+void				free_str_tab(char **str_tab);
 
 #endif
