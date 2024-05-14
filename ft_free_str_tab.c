@@ -6,7 +6,7 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 18:54:34 by aallou-v          #+#    #+#             */
-/*   Updated: 2024/05/13 18:54:47 by aallou-v         ###   ########.fr       */
+/*   Updated: 2024/05/14 13:40:37 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ void	free_str_tab(char **str_tab)
 	{
 		i = 0;
 		while (str_tab[i])
-			free(str_tab[i++]);
+		{
+			free(str_tab[i]);
+			i++;
+		}
 		free(str_tab);
 	}
 }
