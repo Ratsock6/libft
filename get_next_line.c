@@ -6,7 +6,7 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 23:46:49 by maxborde          #+#    #+#             */
-/*   Updated: 2024/06/02 19:28:17 by aallou-v         ###   ########.fr       */
+/*   Updated: 2024/06/02 19:37:29 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*get_dirty_line(int fd, char *buffer)
 
 	charsread = 1;
 	dirtyline = NULL;
-	dirtyline = ft_strjoin(dirtyline, buffer);
-	while (!ft_strchr(dirtyline, '\n') && charsread != 0)
+	dirtyline = ft_strjoin_gnl(dirtyline, buffer);
+	while (!ft_strchr_gnl(dirtyline, '\n') && charsread != 0)
 	{
 		charsread = read(fd, buffer, BUFFER_SIZE);
 		if (charsread == -1)
@@ -30,9 +30,9 @@ char	*get_dirty_line(int fd, char *buffer)
 			return (NULL);
 		}
 		buffer[charsread] = 0;
-		dirtyline = ft_strjoin(dirtyline, buffer);
+		dirtyline = ft_strjoin_gnl(dirtyline, buffer);
 	}
-	if (!ft_strlen(dirtyline) && charsread == 0)
+	if (!ft_strlen_gnl(dirtyline) && charsread == 0)
 	{
 		free(dirtyline);
 		return (NULL);
