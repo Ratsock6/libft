@@ -5,65 +5,61 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 16:36:37 by marvin            #+#    #+#             */
-/*   Updated: 2023/12/02 17:00:41 by aallou-v         ###   ########.fr       */
+/*   Created: 2023/11/07 23:46:14 by maxborde          #+#    #+#             */
+/*   Updated: 2024/06/02 19:33:36 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen_gnl(const char *s)
+size_t	ft_strlen_gnl(char *s)
 {
-	size_t	i;
+	size_t	len;
 
-	i = -1;
-	while (s[++i])
-		;
-	return (i);
+	len = 0;
+	if (!s)
+		return (0);
+	while (s[len])
+		len++;
+	return (len);
 }
 
 char	*ft_strchr_gnl(char *s, int c)
 {
-	int	i;
-
-	i = 0;
 	if (!s)
-		return (0);
-	if (!c)
-		return ((char *)&s[ft_strlen_gnl(s)]);
-	while (s[i] != '\0')
+		return (NULL);
+	while (*s)
 	{
-		if (s[i] == (char) c)
-			return ((char *)&s[i]);
-		i++;
+		if (*s == c)
+			return (s);
+		s++;
 	}
-	return (0);
+	return (NULL);
 }
 
-char	*ft_strjoin_gnl(char *s1, char *s2)
+char	*ft_strjoin_gnl(char *left_str, char *buff)
 {
-	size_t	i;
-	size_t	c;
-	char	*str;
+	char	*string;
+	int		i;
+	int		k;
 
-	if (!s1)
+	if (!left_str)
 	{
-		s1 = (char *)malloc(1 * sizeof(char));
-		s1[0] = '\0';
+		left_str = malloc(sizeof(char) * 1);
+		left_str[0] = 0;
 	}
-	if (!s1 || !s2)
+	if (!buff)
 		return (NULL);
-	str = malloc((ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1) * sizeof(char));
-	if (!str)
+	string = malloc(sizeof(char) * (ft_strlen(left_str) + ft_strlen(buff) + 1));
+	if (!string)
 		return (NULL);
 	i = -1;
-	c = 0;
-	if (s1)
-		while (s1[++i] != '\0')
-			str[i] = s1[i];
-	while (s2[c] != '\0')
-		str[i++] = s2[c++];
-	str[ft_strlen_gnl(s1) + ft_strlen_gnl(s2)] = '\0';
-	free(s1);
-	return (str);
+	k = -1;
+	while (left_str[++i])
+		string[i] = left_str[i];
+	while (buff[++k])
+		string[i + k] = buff[k];
+	free(left_str);
+	string[i + k] = 0;
+	return (string);
 }

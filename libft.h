@@ -6,7 +6,7 @@
 /*   By: aallou-v <aallou-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:41:44 by aallou-v          #+#    #+#             */
-/*   Updated: 2024/05/14 13:45:39 by aallou-v         ###   ########.fr       */
+/*   Updated: 2024/06/02 19:34:13 by aallou-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,9 +96,9 @@ char				*get_next_line(int fd);
 char				*ft_get_line(char *save);
 char				*ft_save(char *save);
 char				*ft_read_and_save(int fd, char *save);
-size_t				ft_strlen_gnl(const char *s);
+size_t				ft_strlen_gnl(char *s);
 char				*ft_strchr_gnl(char *s, int c);
-char				*ft_strjoin_gnl(char *s1, char *s2);
+char				*ft_strjoin_gnl(char *left_str, char *buff);
 
 int					ft_isonly(char *s, char *charset);
 void				free_str_tab(char **str_tab);
